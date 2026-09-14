@@ -1,0 +1,420 @@
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by org.fusesource.jansi.internal.JansiLoader in an unnamed module (file:/C:/Users/haasi/OneDrive/Documents/ChatGPT/PROJECTS/talent-matcher/.tools/apache-maven-3.9.9/lib/jansi-2.4.1.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by com.google.common.util.concurrent.AbstractFuture$UnsafeAtomicHelper (file:/C:/Users/haasi/OneDrive/Documents/ChatGPT/PROJECTS/talent-matcher/.tools/apache-maven-3.9.9/lib/guava-33.2.1-jre.jar)
+WARNING: Please consider reporting this to the maintainers of class com.google.common.util.concurrent.AbstractFuture$UnsafeAtomicHelper
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+[INFO] Scanning for projects...
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/mojo/exec-maven-plugin/3.5.0/exec-maven-plugin-3.5.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/mojo/exec-maven-plugin/3.5.0/exec-maven-plugin-3.5.0.pom (14 kB at 9.0 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/mojo/mojo-parent/86/mojo-parent-86.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/mojo/mojo-parent/86/mojo-parent-86.pom (37 kB at 462 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.11.0/junit-bom-5.11.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.11.0/junit-bom-5.11.0.pom (5.6 kB at 34 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/mojo/exec-maven-plugin/3.5.0/exec-maven-plugin-3.5.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/mojo/exec-maven-plugin/3.5.0/exec-maven-plugin-3.5.0.jar (87 kB at 393 kB/s)
+[INFO] 
+[INFO] ------------------< com.talentmatcher:talent-matcher >------------------
+[INFO] Building talent-matcher 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- exec:3.5.0:java (default-cli) @ talent-matcher ---
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/4.0.2/plexus-utils-4.0.2.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/4.0.2/plexus-utils-4.0.2.pom (13 kB at 128 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-xml/3.0.1/plexus-xml-3.0.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-xml/3.0.1/plexus-xml-3.0.1.pom (3.7 kB at 24 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/18/plexus-18.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/18/plexus-18.pom (29 kB at 230 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-exec/1.4.0/commons-exec-1.4.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-exec/1.4.0/commons-exec-1.4.0.pom (9.5 kB at 87 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/65/commons-parent-65.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/65/commons-parent-65.pom (78 kB at 950 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.10.1/junit-bom-5.10.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.10.1/junit-bom-5.10.1.pom (5.6 kB at 31 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm/9.7.1/asm-9.7.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm/9.7.1/asm-9.7.1.pom (2.4 kB at 15 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm-commons/9.7.1/asm-commons-9.7.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm-commons/9.7.1/asm-commons-9.7.1.pom (2.8 kB at 26 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm-tree/9.7.1/asm-tree-9.7.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm-tree/9.7.1/asm-tree-9.7.1.pom (2.6 kB at 22 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/4.0.2/plexus-utils-4.0.2.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/4.0.2/plexus-utils-4.0.2.jar (193 kB at 891 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-xml/3.0.1/plexus-xml-3.0.1.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-exec/1.4.0/commons-exec-1.4.0.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm/9.7.1/asm-9.7.1.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm-commons/9.7.1/asm-commons-9.7.1.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm-tree/9.7.1/asm-tree-9.7.1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-exec/1.4.0/commons-exec-1.4.0.jar (66 kB at 803 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm-tree/9.7.1/asm-tree-9.7.1.jar (52 kB at 159 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm-commons/9.7.1/asm-commons-9.7.1.jar (73 kB at 173 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-xml/3.0.1/plexus-xml-3.0.1.jar (94 kB at 219 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm/9.7.1/asm-9.7.1.jar (126 kB at 293 kB/s)
+Resume-Job Matching and Talent-Marketplace Engine
+
+1. Display all candidates
+2. Display all jobs
+3. Show inverted skill index
+4. Rank candidates for a job
+5. Recommend jobs for a candidate
+6. Show optimal candidate-job assignment
+7. Form minimum team for project (greedy approximation)
+8. Exit
+Choice: C1 | Haasini | [data structures, git, java, sql] | 2.0 years | BACHELORS
+C2 | Arjun | [aws, docker, git, java, spring boot, sql] | 5.0 years | MASTERS
+C3 | Meera | [machine learning, python, sql, tensorflow] | 3.0 years | MASTERS
+C4 | Ravi | [git, javascript, react] | 1.0 years | DIPLOMA
+C5 | Sara | [aws, docker, linux, networking, python] | 4.0 years | BACHELORS
+C6 | Nikhil | [cybersecurity, linux, networking, python] | 6.0 years | PHD
+C7 | Ananya | [data structures, java, python, react, sql] | 0.0 years | BACHELORS
+C8 | Dev | [git, linux] | 0.5 years | HIGH_SCHOOL
+
+1. Display all candidates
+2. Display all jobs
+3. Show inverted skill index
+4. Rank candidates for a job
+5. Recommend jobs for a candidate
+6. Show optimal candidate-job assignment
+7. Form minimum team for project (greedy approximation)
+8. Exit
+Choice: J1 | Java Backend Developer | [git, java, spring boot, sql] | 2.0 years | BACHELORS
+J2 | Machine Learning Engineer | [machine learning, python, sql, tensorflow] | 3.0 years | MASTERS
+J3 | Frontend Developer | [git, javascript, react] | 1.0 years | DIPLOMA
+J4 | Cloud Engineer | [aws, docker, linux, python] | 4.0 years | BACHELORS
+J5 | Security Analyst | [cybersecurity, linux, networking] | 2.0 years | BACHELORS
+
+1. Display all candidates
+2. Display all jobs
+3. Show inverted skill index
+4. Rank candidates for a job
+5. Recommend jobs for a candidate
+6. Show optimal candidate-job assignment
+7. Form minimum team for project (greedy approximation)
+8. Exit
+Choice: aws -> [C2, C5]
+cybersecurity -> [C6]
+data structures -> [C1, C7]
+docker -> [C2, C5]
+git -> [C1, C2, C4, C8]
+java -> [C1, C2, C7]
+javascript -> [C4]
+linux -> [C5, C6, C8]
+machine learning -> [C3]
+networking -> [C5, C6]
+python -> [C3, C5, C6, C7]
+react -> [C4, C7]
+spring boot -> [C2]
+sql -> [C1, C2, C3, C7]
+tensorflow -> [C3]
+
+1. Display all candidates
+2. Display all jobs
+3. Show inverted skill index
+4. Rank candidates for a job
+5. Recommend jobs for a candidate
+6. Show optimal candidate-job assignment
+7. Form minimum team for project (greedy approximation)
+8. Exit
+Choice: Job ID: Top N: Shared-skill candidates only? (y/n): 
+Candidate: Arjun (C2)
+Job: Java Backend Developer (J1)
+Matched Skills: [git, java, spring boot, sql]
+Missing Skills: []
+Skill Score: 100.00%
+Experience Score: 100.00%
+Qualification Score: 100.00%
+Final Compatibility: 100.00%
+Explanation: Matches 4 of 4 required skills; meets experience requirement; meets qualification requirement. Weighted score: 0.70*100.00 + 0.20*100.00 + 0.10*100.00 = 100.00.
+
+Candidate: Haasini (C1)
+Job: Java Backend Developer (J1)
+Matched Skills: [git, java, sql]
+Missing Skills: [spring boot]
+Skill Score: 75.00%
+Experience Score: 100.00%
+Qualification Score: 100.00%
+Final Compatibility: 82.50%
+Explanation: Matches 3 of 4 required skills; meets experience requirement; meets qualification requirement. Weighted score: 0.70*75.00 + 0.20*100.00 + 0.10*100.00 = 82.50.
+
+Candidate: Meera (C3)
+Job: Java Backend Developer (J1)
+Matched Skills: [sql]
+Missing Skills: [git, java, spring boot]
+Skill Score: 25.00%
+Experience Score: 100.00%
+Qualification Score: 100.00%
+Final Compatibility: 47.50%
+Explanation: Matches 1 of 4 required skills; meets experience requirement; meets qualification requirement. Weighted score: 0.70*25.00 + 0.20*100.00 + 0.10*100.00 = 47.50.
+
+Candidate: Ananya (C7)
+Job: Java Backend Developer (J1)
+Matched Skills: [java, sql]
+Missing Skills: [git, spring boot]
+Skill Score: 50.00%
+Experience Score: 0.00%
+Qualification Score: 100.00%
+Final Compatibility: 45.00%
+Explanation: Matches 2 of 4 required skills; falls below experience requirement; meets qualification requirement. Weighted score: 0.70*50.00 + 0.20*0.00 + 0.10*100.00 = 45.00.
+
+Candidate: Ravi (C4)
+Job: Java Backend Developer (J1)
+Matched Skills: [git]
+Missing Skills: [java, spring boot, sql]
+Skill Score: 25.00%
+Experience Score: 50.00%
+Qualification Score: 0.00%
+Final Compatibility: 27.50%
+Explanation: Matches 1 of 4 required skills; falls below experience requirement; falls below qualification requirement. Weighted score: 0.70*25.00 + 0.20*50.00 + 0.10*0.00 = 27.50.
+
+Candidate: Dev (C8)
+Job: Java Backend Developer (J1)
+Matched Skills: [git]
+Missing Skills: [java, spring boot, sql]
+Skill Score: 25.00%
+Experience Score: 25.00%
+Qualification Score: 0.00%
+Final Compatibility: 22.50%
+Explanation: Matches 1 of 4 required skills; falls below experience requirement; falls below qualification requirement. Weighted score: 0.70*25.00 + 0.20*25.00 + 0.10*0.00 = 22.50.
+
+1. Display all candidates
+2. Display all jobs
+3. Show inverted skill index
+4. Rank candidates for a job
+5. Recommend jobs for a candidate
+6. Show optimal candidate-job assignment
+7. Form minimum team for project (greedy approximation)
+8. Exit
+Choice: Job ID: Top N: Shared-skill candidates only? (y/n): 
+Candidate: Arjun (C2)
+Job: Java Backend Developer (J1)
+Matched Skills: [git, java, spring boot, sql]
+Missing Skills: []
+Skill Score: 100.00%
+Experience Score: 100.00%
+Qualification Score: 100.00%
+Final Compatibility: 100.00%
+Explanation: Matches 4 of 4 required skills; meets experience requirement; meets qualification requirement. Weighted score: 0.70*100.00 + 0.20*100.00 + 0.10*100.00 = 100.00.
+
+Candidate: Haasini (C1)
+Job: Java Backend Developer (J1)
+Matched Skills: [git, java, sql]
+Missing Skills: [spring boot]
+Skill Score: 75.00%
+Experience Score: 100.00%
+Qualification Score: 100.00%
+Final Compatibility: 82.50%
+Explanation: Matches 3 of 4 required skills; meets experience requirement; meets qualification requirement. Weighted score: 0.70*75.00 + 0.20*100.00 + 0.10*100.00 = 82.50.
+
+Candidate: Meera (C3)
+Job: Java Backend Developer (J1)
+Matched Skills: [sql]
+Missing Skills: [git, java, spring boot]
+Skill Score: 25.00%
+Experience Score: 100.00%
+Qualification Score: 100.00%
+Final Compatibility: 47.50%
+Explanation: Matches 1 of 4 required skills; meets experience requirement; meets qualification requirement. Weighted score: 0.70*25.00 + 0.20*100.00 + 0.10*100.00 = 47.50.
+
+Candidate: Ananya (C7)
+Job: Java Backend Developer (J1)
+Matched Skills: [java, sql]
+Missing Skills: [git, spring boot]
+Skill Score: 50.00%
+Experience Score: 0.00%
+Qualification Score: 100.00%
+Final Compatibility: 45.00%
+Explanation: Matches 2 of 4 required skills; falls below experience requirement; meets qualification requirement. Weighted score: 0.70*50.00 + 0.20*0.00 + 0.10*100.00 = 45.00.
+
+Candidate: Sara (C5)
+Job: Java Backend Developer (J1)
+Matched Skills: []
+Missing Skills: [git, java, spring boot, sql]
+Skill Score: 0.00%
+Experience Score: 100.00%
+Qualification Score: 100.00%
+Final Compatibility: 30.00%
+Explanation: Matches 0 of 4 required skills; meets experience requirement; meets qualification requirement. Weighted score: 0.70*0.00 + 0.20*100.00 + 0.10*100.00 = 30.00.
+
+Candidate: Nikhil (C6)
+Job: Java Backend Developer (J1)
+Matched Skills: []
+Missing Skills: [git, java, spring boot, sql]
+Skill Score: 0.00%
+Experience Score: 100.00%
+Qualification Score: 100.00%
+Final Compatibility: 30.00%
+Explanation: Matches 0 of 4 required skills; meets experience requirement; meets qualification requirement. Weighted score: 0.70*0.00 + 0.20*100.00 + 0.10*100.00 = 30.00.
+
+Candidate: Ravi (C4)
+Job: Java Backend Developer (J1)
+Matched Skills: [git]
+Missing Skills: [java, spring boot, sql]
+Skill Score: 25.00%
+Experience Score: 50.00%
+Qualification Score: 0.00%
+Final Compatibility: 27.50%
+Explanation: Matches 1 of 4 required skills; falls below experience requirement; falls below qualification requirement. Weighted score: 0.70*25.00 + 0.20*50.00 + 0.10*0.00 = 27.50.
+
+Candidate: Dev (C8)
+Job: Java Backend Developer (J1)
+Matched Skills: [git]
+Missing Skills: [java, spring boot, sql]
+Skill Score: 25.00%
+Experience Score: 25.00%
+Qualification Score: 0.00%
+Final Compatibility: 22.50%
+Explanation: Matches 1 of 4 required skills; falls below experience requirement; falls below qualification requirement. Weighted score: 0.70*25.00 + 0.20*25.00 + 0.10*0.00 = 22.50.
+
+1. Display all candidates
+2. Display all jobs
+3. Show inverted skill index
+4. Rank candidates for a job
+5. Recommend jobs for a candidate
+6. Show optimal candidate-job assignment
+7. Form minimum team for project (greedy approximation)
+8. Exit
+Choice: Candidate ID: Top N: 
+Candidate: Haasini (C1)
+Job: Java Backend Developer (J1)
+Matched Skills: [git, java, sql]
+Missing Skills: [spring boot]
+Skill Score: 75.00%
+Experience Score: 100.00%
+Qualification Score: 100.00%
+Final Compatibility: 82.50%
+Explanation: Matches 3 of 4 required skills; meets experience requirement; meets qualification requirement. Weighted score: 0.70*75.00 + 0.20*100.00 + 0.10*100.00 = 82.50.
+
+Candidate: Haasini (C1)
+Job: Frontend Developer (J3)
+Matched Skills: [git]
+Missing Skills: [javascript, react]
+Skill Score: 33.33%
+Experience Score: 100.00%
+Qualification Score: 100.00%
+Final Compatibility: 53.33%
+Explanation: Matches 1 of 3 required skills; meets experience requirement; meets qualification requirement. Weighted score: 0.70*33.33 + 0.20*100.00 + 0.10*100.00 = 53.33.
+
+Candidate: Haasini (C1)
+Job: Machine Learning Engineer (J2)
+Matched Skills: [sql]
+Missing Skills: [machine learning, python, tensorflow]
+Skill Score: 25.00%
+Experience Score: 66.67%
+Qualification Score: 0.00%
+Final Compatibility: 30.83%
+Explanation: Matches 1 of 4 required skills; falls below experience requirement; falls below qualification requirement. Weighted score: 0.70*25.00 + 0.20*66.67 + 0.10*0.00 = 30.83.
+
+Candidate: Haasini (C1)
+Job: Security Analyst (J5)
+Matched Skills: []
+Missing Skills: [cybersecurity, linux, networking]
+Skill Score: 0.00%
+Experience Score: 100.00%
+Qualification Score: 100.00%
+Final Compatibility: 30.00%
+Explanation: Matches 0 of 3 required skills; meets experience requirement; meets qualification requirement. Weighted score: 0.70*0.00 + 0.20*100.00 + 0.10*100.00 = 30.00.
+
+Candidate: Haasini (C1)
+Job: Cloud Engineer (J4)
+Matched Skills: []
+Missing Skills: [aws, docker, linux, python]
+Skill Score: 0.00%
+Experience Score: 50.00%
+Qualification Score: 100.00%
+Final Compatibility: 20.00%
+Explanation: Matches 0 of 4 required skills; falls below experience requirement; meets qualification requirement. Weighted score: 0.70*0.00 + 0.20*50.00 + 0.10*100.00 = 20.00.
+
+1. Display all candidates
+2. Display all jobs
+3. Show inverted skill index
+4. Rank candidates for a job
+5. Recommend jobs for a candidate
+6. Show optimal candidate-job assignment
+7. Form minimum team for project (greedy approximation)
+8. Exit
+Choice: Arjun -> Java Backend Developer -> 100.00
+Meera -> Machine Learning Engineer -> 100.00
+Ravi -> Frontend Developer -> 100.00
+Sara -> Cloud Engineer -> 100.00
+Nikhil -> Security Analyst -> 100.00
+Total compatibility: 500.00
+Unassigned candidates: [Haasini, Ananya, Dev]
+Unfilled jobs: []
+
+1. Display all candidates
+2. Display all jobs
+3. Show inverted skill index
+4. Rank candidates for a job
+5. Recommend jobs for a candidate
+6. Show optimal candidate-job assignment
+7. Form minimum team for project (greedy approximation)
+8. Exit
+Choice: Comma-separated project skills (Enter for sample): Greedy set-cover team (approximation):
+Arjun -> newly covered [aws, docker, java, sql]
+Nikhil -> newly covered [cybersecurity, python]
+Covered: [aws, cybersecurity, docker, java, python, sql]
+Uncovered: []
+Full coverage: true
+
+1. Display all candidates
+2. Display all jobs
+3. Show inverted skill index
+4. Rank candidates for a job
+5. Recommend jobs for a candidate
+6. Show optimal candidate-job assignment
+7. Form minimum team for project (greedy approximation)
+8. Exit
+Choice: Comma-separated project skills (Enter for sample): Greedy set-cover team (approximation):
+Haasini -> newly covered [java]
+Covered: [java]
+Uncovered: [quantum]
+Full coverage: false
+
+1. Display all candidates
+2. Display all jobs
+3. Show inverted skill index
+4. Rank candidates for a job
+5. Recommend jobs for a candidate
+6. Show optimal candidate-job assignment
+7. Form minimum team for project (greedy approximation)
+8. Exit
+Choice: Choose a number from 1 to 8.
+
+1. Display all candidates
+2. Display all jobs
+3. Show inverted skill index
+4. Rank candidates for a job
+5. Recommend jobs for a candidate
+6. Show optimal candidate-job assignment
+7. Form minimum team for project (greedy approximation)
+8. Exit
+Choice: Job ID: Top N: Shared-skill candidates only? (y/n): Input error: Unknown job: BAD
+
+1. Display all candidates
+2. Display all jobs
+3. Show inverted skill index
+4. Rank candidates for a job
+5. Recommend jobs for a candidate
+6. Show optimal candidate-job assignment
+7. Form minimum team for project (greedy approximation)
+8. Exit
+Choice: Candidate ID: Top N: Input error: Top N must be nonnegative
+
+1. Display all candidates
+2. Display all jobs
+3. Show inverted skill index
+4. Rank candidates for a job
+5. Recommend jobs for a candidate
+6. Show optimal candidate-job assignment
+7. Form minimum team for project (greedy approximation)
+8. Exit
+Choice: Goodbye.
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  5.527 s
+[INFO] Finished at: 2026-09-11T11:24:33+05:30
+[INFO] ------------------------------------------------------------------------

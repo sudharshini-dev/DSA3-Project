@@ -1,0 +1,12 @@
+<!DOCTYPE html><html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/layout :: head('Jobs')}"></head>
+<body><a class="skip-link" href="#main">Skip to content</a>
+<aside th:replace="~{fragments/sidebar :: sidebar}"></aside>
+<div class="app-main"><header th:replace="~{fragments/navbar :: navbar}"></header>
+<main id="main" class="content">
+<div th:replace="~{fragments/layout :: alerts}"></div>
+<div class="page-heading"><div><p class="eyebrow">OPPORTUNITIES</p><h1>Jobs</h1><p class="text-secondary mb-0">Define the roles. Discover the people who can make an impact.</p></div><a class="btn btn-primary" href="/jobs/add">+ Add Job</a></div>
+
+<div class="panel"><div class="panel-heading"><h2>All jobs <span class="count-pill" th:text="${#lists.size(jobs)}"></span></h2></div><div class="table-responsive"><table class="table align-middle"><thead><tr><th>JOB ID</th><th>JOB TITLE</th><th>REQUIRED SKILLS</th><th>MIN. EXPERIENCE</th><th>QUALIFICATION</th></tr></thead><tbody><tr th:each="j : ${jobs}"><td class="text-secondary" th:text="${j.id()}"></td><td><strong th:text="${j.title()}"></strong></td><td><span th:replace="~{fragments/layout :: skills(${j.requiredSkills()}, '')}"></span></td><td class="text-nowrap" th:text="|${@display.number(j.minimumExperience())} years|"></td><td th:text="${@display.qualification(j.requiredQualification())}"></td></tr><tr th:if="${#lists.isEmpty(jobs)}"><td colspan="5" class="empty-state">No jobs yet. Add your first role to discover suitable candidates.</td></tr></tbody></table></div></div>
+<footer class="page-footer"><span>Talent Matcher · DSA Project</span><span>In-memory demo · Changes reset on restart</span></footer>
+</main></div><script src="/vendor/bootstrap/bootstrap.bundle.min.js"></script></body></html>

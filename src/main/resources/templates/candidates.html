@@ -1,0 +1,15 @@
+<!DOCTYPE html><html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/layout :: head('Candidates')}"></head>
+<body><a class="skip-link" href="#main">Skip to content</a>
+<aside th:replace="~{fragments/sidebar :: sidebar}"></aside>
+<div class="app-main"><header th:replace="~{fragments/navbar :: navbar}"></header>
+<main id="main" class="content">
+<div th:replace="~{fragments/layout :: alerts}"></div>
+<div class="page-heading"><div><p class="eyebrow">TALENT POOL</p><h1>Candidates</h1><p class="text-secondary mb-0">Manage the people and skills behind your next great team.</p></div><a class="btn btn-primary" href="/candidates/add">+ Add Candidate</a></div>
+
+<div class="panel"><div class="panel-heading"><h2>All candidates <span class="count-pill" th:text="${#lists.size(candidates)}"></span></h2><span class="subtle-label">Skills are normalized automatically</span></div>
+<div class="table-responsive"><table class="table align-middle"><thead><tr><th>ID</th><th>NAME</th><th>SKILLS</th><th>EXPERIENCE</th><th>QUALIFICATION</th><th>CERTIFICATIONS</th><th>ACTIONS</th></tr></thead><tbody>
+<tr th:each="c : ${candidates}"><td class="text-secondary" th:text="${c.id()}"></td><td><a class="person-link" th:href="@{/candidates/{id}(id=${c.id()})}" th:text="${c.name()}"></a></td><td class="skills-column"><span th:replace="~{fragments/layout :: skills(${c.skills()}, '')}"></span></td><td class="text-nowrap" th:text="|${@display.number(c.yearsOfExperience())} years|"></td><td class="text-nowrap" th:text="${@display.qualification(c.qualification())}"></td><td><span th:replace="~{fragments/layout :: skills(${c.certifications()}, '')}"></span></td><td><div class="action-links"><a th:href="@{/candidates/{id}(id=${c.id()})}">View</a><a th:href="@{/candidates/{id}/edit(id=${c.id()})}">Edit</a></div></td></tr>
+<tr th:if="${#lists.isEmpty(candidates)}"><td colspan="7" class="empty-state">Your talent pool is empty. Add your first candidate to start matching.</td></tr></tbody></table></div></div>
+<footer class="page-footer"><span>Talent Matcher · DSA Project</span><span>In-memory demo · Changes reset on restart</span></footer>
+</main></div><script src="/vendor/bootstrap/bootstrap.bundle.min.js"></script></body></html>

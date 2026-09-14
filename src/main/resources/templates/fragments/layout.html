@@ -1,0 +1,6 @@
+<!DOCTYPE html><html lang="en" xmlns:th="http://www.thymeleaf.org"><head th:fragment="head(title)"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title th:text="${title + ' | Talent Matcher'}">Talent Matcher</title><link rel="stylesheet" href="/vendor/bootstrap/bootstrap.min.css"><link rel="stylesheet" href="/css/style.css"></head>
+<body>
+<div th:fragment="alerts"><div th:if="${success}" class="alert alert-success" role="status" th:text="${success}"></div></div>
+<span th:fragment="skills(values, tone)" class="skill-list"><span th:each="skill : ${@display.sorted(values)}" class="skill-badge" th:classappend="${tone}" th:text="${skill}"></span><span class="text-secondary small" th:if="${#sets.isEmpty(values)}">None</span></span>
+<div th:fragment="score(value)" class="score-cell"><div class="score-value"><span th:text="${@display.number(value)}">0</span><span class="score-unit">%</span></div><div class="progress" role="progressbar" aria-label="Compatibility score" aria-valuemin="0" aria-valuemax="100" th:attr="aria-valuenow=${value}"><div class="progress-bar" th:style="|width: ${value}%|"></div></div></div>
+</body></html>

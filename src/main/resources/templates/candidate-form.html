@@ -1,0 +1,19 @@
+<!DOCTYPE html><html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/layout :: head('Candidate profile')}"></head>
+<body><a class="skip-link" href="#main">Skip to content</a>
+<aside th:replace="~{fragments/sidebar :: sidebar}"></aside>
+<div class="app-main"><header th:replace="~{fragments/navbar :: navbar}"></header>
+<main id="main" class="content">
+<div th:replace="~{fragments/layout :: alerts}"></div>
+<div class="page-heading"><div><p class="eyebrow">TALENT POOL</p><h1>Candidate profile</h1><p class="text-secondary mb-0">Add the details that help connect this candidate to the right opportunities.</p></div></div>
+
+<div class="row g-4"><div class="col-lg-8"><section class="panel form-panel"><h2 th:text="${editing == true ? 'Edit Candidate' : 'Add Candidate'}">Add Candidate</h2><form method="post" th:action="@{__${formAction}__}" th:object="${candidateForm}"><div class="alert alert-danger" role="alert" th:if="${#fields.hasErrors('*')}"><strong>Please check your entries.</strong><ul class="mb-0 mt-1"><li th:each="error : ${#fields.allErrors()}" th:text="${error}"></li></ul></div>
+<div class="mb-4"><label class="form-label" for="name">Full name <span class="required">*</span></label><input class="form-control" id="name" th:field="*{name}" maxlength="120" required placeholder="e.g. Haasini Sharma" th:errorclass="is-invalid"></div>
+<div class="mb-4"><label class="form-label" for="skills">Skills</label><textarea class="form-control" id="skills" th:field="*{skills}" maxlength="2000" rows="3" placeholder="Java, SQL, Git, Spring Boot" th:errorclass="is-invalid"></textarea><div class="form-text">Separate skills with commas. Aliases such as JS and ML are normalized.</div></div>
+<div class="row g-3 mb-4"><div class="col-md-6"><label class="form-label" for="yearsOfExperience">Years of experience <span class="required">*</span></label><input class="form-control" id="yearsOfExperience" type="number" min="0" max="80" step="any" th:field="*{yearsOfExperience}" required th:errorclass="is-invalid"></div>
+<div class="col-md-6"><label class="form-label" for="qualification">Qualification <span class="required">*</span></label><select class="form-select" id="qualification" th:field="*{qualification}" required th:errorclass="is-invalid"><option th:each="q : ${qualifications}" th:value="${q}" th:text="${@display.qualification(q)}"></option></select></div></div>
+<div class="mb-4"><label class="form-label" for="certifications">Certifications <span class="text-secondary fw-normal">(optional)</span></label><input class="form-control" id="certifications" th:field="*{certifications}" maxlength="1000" placeholder="AWS Certified, Oracle Java" th:errorclass="is-invalid"><div class="form-text">Separate certifications with commas.</div></div>
+<div class="form-actions"><button class="btn btn-primary" type="submit" th:text="${editing == true ? 'Save Changes' : 'Add Candidate'}">Add Candidate</button><a class="btn btn-light" href="/candidates">Cancel</a></div></form></section></div>
+<aside class="col-lg-4"><div class="tip-card"><span class="eyebrow">A CONNECTED TALENT POOL</span><h2>One profile.<br>More possibilities.</h2><p>New and updated skills appear in the skill index immediately. This profile will be available for rankings, recommendations, assignments, and team formation.</p><p class="mb-0 small">Certifications are shown on the profile; compatibility uses skills, experience, and qualification.</p></div></aside></div>
+<footer class="page-footer"><span>Talent Matcher · DSA Project</span><span>In-memory demo · Changes reset on restart</span></footer>
+</main></div><script src="/vendor/bootstrap/bootstrap.bundle.min.js"></script></body></html>

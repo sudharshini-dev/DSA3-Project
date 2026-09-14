@@ -1,0 +1,16 @@
+<!DOCTYPE html><html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/layout :: head('Add Job')}"></head>
+<body><a class="skip-link" href="#main">Skip to content</a>
+<aside th:replace="~{fragments/sidebar :: sidebar}"></aside>
+<div class="app-main"><header th:replace="~{fragments/navbar :: navbar}"></header>
+<main id="main" class="content">
+<div th:replace="~{fragments/layout :: alerts}"></div>
+<div class="page-heading"><div><p class="eyebrow">OPPORTUNITIES</p><h1>Add Job</h1><p class="text-secondary mb-0">Tell us what the role needs. The engine will help find the right people.</p></div></div>
+
+<section class="panel form-panel narrow-panel"><h2>Role details</h2><form method="post" th:action="@{/jobs/add}" th:object="${jobForm}"><div class="alert alert-danger" role="alert" th:if="${#fields.hasErrors('*')}"><strong>Please check your entries.</strong><ul class="mb-0 mt-1"><li th:each="error : ${#fields.allErrors()}" th:text="${error}"></li></ul></div>
+<div class="mb-4"><label class="form-label" for="title">Job title <span class="required">*</span></label><input class="form-control" id="title" th:field="*{title}" required maxlength="120" placeholder="e.g. Java Backend Developer" th:errorclass="is-invalid"></div>
+<div class="mb-4"><label class="form-label" for="requiredSkills">Required skills</label><textarea class="form-control" id="requiredSkills" th:field="*{requiredSkills}" rows="3" maxlength="2000" placeholder="Java, SQL, Spring Boot, Git" th:errorclass="is-invalid"></textarea><div class="form-text">Separate skills with commas. Leave blank if there are no skill requirements.</div></div>
+<div class="row g-3 mb-4"><div class="col-md-6"><label class="form-label" for="minimumExperience">Minimum experience <span class="required">*</span></label><input class="form-control" id="minimumExperience" th:field="*{minimumExperience}" type="number" min="0" max="80" step="any" required th:errorclass="is-invalid"><div class="form-text">Use 0 for an entry-level role.</div></div><div class="col-md-6"><label class="form-label" for="requiredQualification">Required qualification <span class="required">*</span></label><select class="form-select" id="requiredQualification" th:field="*{requiredQualification}" required th:errorclass="is-invalid"><option th:each="q : ${qualifications}" th:value="${q}" th:text="${@display.qualification(q)}"></option></select></div></div>
+<div class="form-actions"><button class="btn btn-primary" type="submit">Add Job</button><a class="btn btn-light" href="/jobs">Cancel</a></div></form></section>
+<footer class="page-footer"><span>Talent Matcher · DSA Project</span><span>In-memory demo · Changes reset on restart</span></footer>
+</main></div><script src="/vendor/bootstrap/bootstrap.bundle.min.js"></script></body></html>

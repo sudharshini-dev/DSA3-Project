@@ -1,0 +1,19 @@
+<!DOCTYPE html><html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/layout :: head('Optimal Assignment')}"></head>
+<body><a class="skip-link" href="#main">Skip to content</a>
+<aside th:replace="~{fragments/sidebar :: sidebar}"></aside>
+<div class="app-main"><header th:replace="~{fragments/navbar :: navbar}"></header>
+<main id="main" class="content">
+<div th:replace="~{fragments/layout :: alerts}"></div>
+<div class="page-heading"><div><p class="eyebrow">THE BIGGER PICTURE</p><h1>Optimal Assignment</h1><p class="text-secondary mb-0">Find the best overall candidate-to-job allocation across your marketplace.</p></div></div>
+
+<div class="algorithm-note"><svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h18 M16 2l5 5-5 5 M21 17H3 M8 12l-5 5 5 5"/></svg><span><strong>Algorithm Used: Hungarian Algorithm</strong><br>Model: Weighted Bipartite Graph</span></div>
+<section class="panel form-panel mb-4"><div class="row align-items-center g-3"><div class="col-lg-8"><h2>Optimize the whole allocation</h2><p class="text-secondary mb-0">One candidate per job. One job per candidate. Maximize total compatibility across all assignments.</p></div><div class="col-lg-4"><form method="post" th:action="@{/assignment}"><button class="btn btn-primary w-100" type="submit">Generate Optimal Assignment</button></form></div></div></section>
+<section class="panel" th:if="${result != null}"><div class="panel-heading"><div><h2>Your optimal allocation</h2><p th:text="|${#lists.size(result.assignments())} candidate–job matches|"></p></div><div class="total-score"><small>Total Compatibility Score</small><strong th:text="${@display.number(result.totalScore())}"></strong></div></div>
+<div class="assignment-labels"><span>CANDIDATE</span><span></span><span>ASSIGNED JOB</span><span>COMPATIBILITY</span></div>
+<div class="assignment-row" th:each="m : ${result.assignments()}"><div><strong th:text="${m.candidate().name()}"></strong><small th:text="${m.candidate().id()}"></small></div><span class="assignment-arrow" aria-hidden="true">→</span><div><strong th:text="${m.job().title()}"></strong><small th:text="${m.job().id()}"></small></div><div th:replace="~{fragments/layout :: score(${m.finalScore()})}"></div></div>
+<div class="empty-state" th:if="${#lists.isEmpty(result.assignments())}">Add at least one candidate and one job to generate an assignment.</div>
+<div class="assignment-unmatched"><div><h3 class="detail-label">UNASSIGNED CANDIDATES</h3><span th:if="${#lists.isEmpty(result.unassignedCandidates())}">None</span><span class="skill-badge" th:each="c : ${result.unassignedCandidates()}" th:text="${c.name()}"></span></div><div><h3 class="detail-label">UNFILLED JOBS</h3><span th:if="${#lists.isEmpty(result.unfilledJobs())}">None</span><span class="skill-badge" th:each="j : ${result.unfilledJobs()}" th:text="${j.title()}"></span></div></div></section>
+<div class="panel empty-state" th:if="${result == null}"><svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h18 M16 2l5 5-5 5 M21 17H3 M8 12l-5 5 5 5"/></svg><h2>Better together, optimally assigned</h2><p>Generate an assignment to see how your candidates and jobs connect.</p></div>
+<footer class="page-footer"><span>Talent Matcher · DSA Project</span><span>In-memory demo · Changes reset on restart</span></footer>
+</main></div><script src="/vendor/bootstrap/bootstrap.bundle.min.js"></script></body></html>

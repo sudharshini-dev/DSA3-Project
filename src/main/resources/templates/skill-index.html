@@ -1,0 +1,14 @@
+<!DOCTYPE html><html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/layout :: head('Skill Index')}"></head>
+<body><a class="skip-link" href="#main">Skip to content</a>
+<aside th:replace="~{fragments/sidebar :: sidebar}"></aside>
+<div class="app-main"><header th:replace="~{fragments/navbar :: navbar}"></header>
+<main id="main" class="content">
+<div th:replace="~{fragments/layout :: alerts}"></div>
+<div class="page-heading"><div><p class="eyebrow">INSIDE THE ENGINE</p><h1>Skill Index</h1><p class="text-secondary mb-0">Explore the connections between normalized skills and your talent pool.</p></div></div>
+
+<div class="algorithm-note"><svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h5v5H4z M15 4h5v5h-5z M4 15h5v5H4z M15 15h5v5h-5z"/></svg><span><strong>Data Structure: Inverted Index</strong><br>Maps each normalized skill to candidates possessing that skill, allowing faster relevant-candidate retrieval.</span></div>
+<div class="section-heading"><h2>Skills in your workspace <span class="count-pill" th:text="${#maps.size(skillIndex)}"></span></h2><span class="subtle-label">Live postings · Sorted alphabetically</span></div>
+<div class="row g-3"><div class="col-sm-6 col-xl-4" th:each="entry : ${skillIndex}"><article class="panel index-card"><div class="index-heading"><h2 th:text="${entry.key}"></h2><span class="count-pill" th:text="${#sets.size(entry.value)}"></span></div><div class="posting-list"><a class="posting" th:each="id : ${entry.value}" th:href="@{/candidates/{id}(id=${id})}"><span class="posting-dot"></span><span th:text="${candidateNames.getOrDefault(id, id)}"></span><small th:text="${id}"></small></a></div></article></div></div><div class="panel empty-state" th:if="${#maps.isEmpty(skillIndex)}"><h2>No skills indexed yet</h2><p>Add a candidate with skills to populate the inverted index.</p></div>
+<footer class="page-footer"><span>Talent Matcher · DSA Project</span><span>In-memory demo · Changes reset on restart</span></footer>
+</main></div><script src="/vendor/bootstrap/bootstrap.bundle.min.js"></script></body></html>
